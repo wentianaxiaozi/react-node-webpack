@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>卖场图模板1</title>
+    <link rel="stylesheet" href="https://web.cdn.16801.com/common/swiper.min.css">
+</head>
+<body>
+
+<script>
+    !function (d) {
+        var c = d.document;
+        var a = c.documentElement;
+        var b = d.devicePixelRatio;
+        var f;
+
+        function e() {
+          var h = a.getBoundingClientRect().width, g;
+          if (b === 1) {
+            h = 720
+          }
+          if(h>720) h = 720;//设置基准值的极限值
+          g                = h / 7.2;
+          a.style.fontSize = g + "px"
+        }
+
+        if (b > 2) {
+          b = 3
+        } else {
+          if (b > 1) {
+            b = 2
+          } else {
+            b = 1
+          }
+        }
+        a.setAttribute("data-dpr", b);
+        d.addEventListener("resize", function () {
+          clearTimeout(f);
+          f = setTimeout(e, 200)
+        }, false);
+        e()
+    }(window);
+
+</script>
+<style>
+    * {margin: 0; padding: 0;}
+    .wrap {width: 600px; height: 800px; overflow: auto;}
+    .content {width: 100%; }
+    .head {display: flex; align-items: center; justify-content: flex-start; width: 95%; margin: 0 auto; padding-top: 0.1rem;}
+    .head-left {width: 2.2rem; height: 2.2rem;}
+    .head-left > img {width: 100%;}
+    .head-right {display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; margin-left: 0.2rem; border: 0.01rem solid transparent;}
+    .game-title {display: flex; align-items: center; justify-content: flex-start;}
+    .span-title {font-size: 0.27rem; font-weight: bold;}
+    .title-code-img {width: 0.6rem; margin-left: 5px;}
+    .game-describe {display: flex; align-items: center; height: 0.4rem;}
+    .game-describe-top {margin-top: 0.1rem;}
+    .game-describe > span {font-size: 0.18rem; color: #666;}
+    .game-level {display: flex; align-items: flex-end; width: 4rem; justify-content: space-between; margin-top: 0.1rem;    }
+    .xing {height: 0.3rem; display: inline-flex;}
+    .a-down {display: inline-flex; align-items: center;}
+    .down-img {width: 0.92rem; height: 0.52rem;}
+    .line {background: #ccc; width: 100%; height: 0.01rem; margin-top: 0.2rem;}
+    .phone-title {height: 0.92rem; display: flex; align-items: center; font-size: 0.5rem; padding-left: 0.2rem;}
+    .swiper-container-bottom { width: 95%; height: 6.6rem; margin: 0 auto; }
+    .swiper-slide-bottom { height: 6.6rem; width: calc(6.66rem/1.78)}
+    .swiper-slide-bottom > img {height: 6.6rem;}
+    .main-content {width: 95%; margin: 0 auto;}
+    h2 {font-size: 0.5rem; margin-top: 0.1rem;}
+    .main-content > p {font-size: 0.16rem; color: #454444; line-height: 0.4rem;}
+    .mask {width: 100%; height: 100vh; position: fixed; left: 0; top: 0; background: rgba(0,0,0,.8); z-index: 99; display: none;}
+    .mask-box {width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;}
+    .swiper-container-mask {height: 8.0rem; width: 4.48rem; display: flex; align-items: center; justify-content: center;}
+    .swiper-slide-top {height: 8.0rem;}
+    .swiper-slide-top > img {height: 8.0rem;}
+</style>
+<div class="middle">
+    <div class="wrap">
+        <div class="content">
+            <div class="head">
+                <div class="head-left">
+                    <!-- <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/df514229.png" alt="游戏icon"> -->
+                    <input type="file">
+                </div>
+                <div class="head-right">
+                    <div class="game-title">
+                        <span class="span-title">
+                            <!-- 龙纪元-神魂觉醒 -->
+                            <input type="text">
+                        </span>
+                        <img src="http://web.cdn.16801.com/img.lh.chujian.com/ldy/test-img/img9/fove.jpg" alt="" class="title-code-img">
+                        <input type="file" class="title-code-img">
+                    </div>
+                    <div class="game-describe game-describe-top" >
+                        <span>无双割草MMO手游</span>
+                        <input type="text">
+                    </div>
+                    <div class="game-describe">
+                        <span>提供App内购买项目</span>
+                        <input type="text">
+                    </div>
+                    <div class="game-level">
+                        <span class="xing">
+                            <img src="http://web.cdn.16801.com/img.lh.chujian.com/ldy/test-img/img9/xing.jpg" alt="">
+                            <input type="file">
+                        </span>
+                        <a href="javascript:;" class="a-down" onclick="downloadPackage(1, 'ios', 'android')">
+                            <img src="http://web.cdn.16801.com/img.lh.chujian.com/ldy/test-img/img9/down.jpg" class="down-img" alt="">
+                            <input type="file" class="down-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="message">
+                <div class="phone-title">
+                    <span>iPhone</span>
+                    <input type="text">
+                </div>
+                <div class="carousel">
+                    <div class="swiper-container swiper-container-bottom">
+                        <div class="swiper-scrollbar"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-bottom">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/3b784bb6.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-bottom">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/5cb64901.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-bottom">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/56fc4437.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-bottom">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/91c7443e.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-bottom">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/27704960.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="file">
+                </div>
+
+                <div class="main-content">
+                    <h2>内容提要</h2>
+                    <input type="text">
+                    <p>
+                        上九天之巅，下炼狱之海，只为万众瞩目<br>
+                        闯龙窟古墓，斩真龙恶鬼，但博红颜一笑
+                        <br><br>
+
+        无双割草MMO手游《龙纪元》，匠心独运地融合暗黑幻想风格，酷炫角色神级职业，丰富技能随心搭配，一秒变身开无双，打击感与操作感兼具，畅爽的战斗体验根本停不下来，真龙魔兽任你驯服，绝世神兵等你主宰。以繁华盛唐为背景再度引燃你心中的仙侠之魂。扣人心弦的剧情设计，恢弘磅礴的场景勾画，邀三两好友同游盛世绘卷，大千世界，有你不孤单。
+        <br><br>
+
+        【逆天屠魔 全图掉宝】
+        <br>
+        奇幻异界斗仙兽，无尽炼狱斩万魔
+        <br>
+        超高爆率，人手神装，你要的快乐，这里全都有。
+        <br><br>
+        【超神变身 无双乱舞】
+        <br>
+        自带变身系统，一键完美蜕变
+        <br>
+        爆炸伤害，劲爽割草，无限连击嗨到爆，爽就完事了。
+        <br><br>
+        【极致特效 酷炫外观】
+        <br>
+        梦幻双翼，华丽技能
+        <br>
+        装备坐骑两开花，战魂灵将开服送
+        <br>
+        成长福利拿到手软，光速升级自在畅游
+        <br><br>
+                    </p>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="mask">
+                <div class="mask-box">
+                    <div class="swiper-container swiper-container-mask">
+                        <div class="swiper-scrollbar"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-top">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/3b784bb6.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-top">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/5cb64901.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-top">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/56fc4437.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-top">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/91c7443e.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-top">
+                                <img src="http://txdl.cdn.16801.com/g/templateimg/3c4e4f36b87161c5/27704960.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://web.cdn.16801.com/common/jquery.js"></script>
+<script src="https://web.cdn.16801.com/common/swiper.min.js"></script>
+<script>
+    $('.mask').hide()
+    $('.mask').on('click', function() {
+        $(this).hide()
+    })
+    var swiper = new Swiper('.swiper-container-bottom', {
+        spaceBetween: 10,
+        initialSlide: 0,
+        slidesPerView: 1.8,
+        centeredSlides: false,
+        slideToClickedSlide: true,
+        grabCursor: true,
+        scrollbar: '.swiper-scrollbar',
+    });
+
+
+    $('.swiper-slide').on('click', function(e) {
+        $('.mask').show()
+        let index = $(this).index()
+        var swiper = new Swiper('.swiper-container-mask', {
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            grabCursor: true,
+            scrollbar: '.swiper-scrollbar',
+        });
+
+        swiper.slideTo(index);
+    })
+</script> -->
+</body>
+</html>
+
+
+
+
+  let img_arr = JSON.stringify(vm.result_arr)
+            let title = $('#icon_title').val() //页面title
+            let figure_head =$('#icon_head').val() //页面主标题
+            let figure_head_2 = $('#icon_head_2').val() //页面副标题
+            let figure_textarea = $('#icon_textarea').val().replace(/\n/g, '<br/>')//页面主要内容
+            let android_url = $('#android_url').val() //安卓下载地址
+            let ios_url = $('#ios_url').val() //ios下载地址
+
+
+            icon
+            figure
+            name
+            template_style

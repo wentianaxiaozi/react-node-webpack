@@ -1,0 +1,5 @@
+// let age:number = 123
+function warnUser() {
+    console.log('this is my warning message');
+}
+warnUser();
